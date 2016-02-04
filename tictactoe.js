@@ -31,73 +31,83 @@ $(document).ready(function(){
 
 
   $("#field1Button").click(function(){
+    $("#field1Button").unbind();
+    //May not need line below
     var usable = {clicked:true};
     // $("#field2").addClass("X");
-    addMark("#field1");
+    addMark("#field1Button");
     gameOverCounter();
   });
 
 
   $("#field2Button").click(function(){
+    $("#field2Button").unbind();
     var usable = {clicked:true};
     // $("#field2").addClass("X");
-    addMark("#field2");
+    addMark("#field2Button");
     gameOverCounter();
   });
 
 
   $("#field3Button").click(function(){
+    $("#field3Button").unbind();
     var usable = {clicked:true};
     // $("#field2").addClass("X");
-    addMark("#field3");
+    addMark("#field3Button");
     gameOverCounter();
   });
 
 
   $("#field4Button").click(function(){
+    $("#field4Button").unbind();
     var usable = {clicked:true};
     // $("#field2").addClass("X");
-    addMark("#field4");
+    addMark("#field4Button");
     gameOverCounter();
   });
 
 
   $("#field5Button").click(function(){
+    $("#field5Button").unbind();
     var usable = {clicked:true};
     // $("#field2").addClass("X");
-    addMark("#field5");
+    addMark("#field5Button");
     gameOverCounter();
   });
 
 
   $("#field6Button").click(function(){
+    $("#field6Button").unbind();
     var usable = {clicked:true};
     // $("#field2").addClass("X");
-    addMark("#field6");
+    addMark("#field6Button");
     gameOverCounter();
   });
 
 
   $("#field7Button").click(function(){
+    $("#field7Button").unbind();
     var usable = {clicked:true};
     // $("#field2").addClass("X");
-    addMark("#field7");
+    addMark("#field7Button");
     gameOverCounter();
   });
 
 
   $("#field8Button").click(function(){
+    $("#field8Button").unbind();
     var usable = {clicked:true};
     // $("#field2").addClass("X");
-    addMark("#field8");
+    addMark("#field8Button");
     gameOverCounter();
   });
 
 
   $("#field9Button").click(function(){
+    $("#field9Button").unbind();
     var usable = {clicked:true};
     // $("#field2").addClass("X");
-    addMark("#field9");
+    addMark("#field9Button");
     gameOverCounter();
   });
 
