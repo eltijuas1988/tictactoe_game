@@ -8,6 +8,10 @@ h1 {
   text-align: center;
 }
 
+h3 {
+  color: white;
+}
+
 #playerIcon {
   margin-left: auto;
   margin-right: auto;
@@ -23,10 +27,6 @@ img {
   width:auto;
   margin: auto;
 
-}
-
-#field1 img {
-  display: none;
 }
 
 .fieldButton {
