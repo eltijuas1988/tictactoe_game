@@ -13,14 +13,14 @@ $(document).ready(function(){
 /* Function determines if there is a winning combination on the board */
 
   function winLoseOrStalemate() {
-    winCombo1 = board[0] + board[1] + board[2];
-    winCombo2 = board[3] + board[4] + board[5];
-    winCombo3 = board[6] + board[7] + board[8];
-    winCombo4 = board[0] + board[3] + board[6];
-    winCombo5 = board[1] + board[4] + board[7];
-    winCombo6 = board[2] + board[5] + board[8];
-    winCombo7 = board[0] + board[4] + board[8];
-    winCombo8 = board[2] + board[4] + board[6];
+    // winCombo1 = board[0] + board[1] + board[2];
+    // winCombo2 = board[3] + board[4] + board[5];
+    // winCombo3 = board[6] + board[7] + board[8];
+    // winCombo4 = board[0] + board[3] + board[6];
+    // winCombo5 = board[1] + board[4] + board[7];
+    // winCombo6 = board[2] + board[5] + board[8];
+    // winCombo7 = board[0] + board[4] + board[8];
+    // winCombo8 = board[2] + board[4] + board[6];
 
     var allWinningCombinations = [
       winCombo1 = board[0] + board[1] + board[2],
@@ -34,17 +34,19 @@ $(document).ready(function(){
     ];
 
     for(var i = 0; i < allWinningCombinations.length; i++ ){
-      console.log(allWinningCombinations[i]);
-    }
-
-    if(winCombo1 === 3){
-      alert("player X wins " + winCombo1);
-    } else if(winCombo1 === -3) {
-      alert("player O wins " + winCombo1);
+      if(allWinningCombinations[i] === 3){
+        // return alert("player X wins ");
+        $("#currentPlayer").html("Player 1 Wins");
+        $("#messages").html("Thanks for playing");
+        $(".allFields").unbind();
+      } else if(allWinningCombinations[i] === -3) {
+        // return alert("player O wins ");
+        $("#currentPlayer").html("Player 2 Wins");
+        $("#messages").html("Thanks for playing");
+        $(".allFields").unbind();
+      }
     }
   };
-
-
 
 
   /* Function that tracks how many turns are left. */
@@ -54,7 +56,7 @@ $(document).ready(function(){
       $("#currentPlayer").html("GAME OVER");
       $("#messages").html("Thanks for playing");
     }
-    else if (counter > 0) {
+    else if (counter > 0 && ("#currentPlayer" === "Player 1's Turn " || "#currentPlayer" === "Player 2's Turn ")) {
       $("#messages").html("There are " + counter + " slots open...");
     }
   }
